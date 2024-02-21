@@ -1,6 +1,18 @@
 """
 Description: Ruleta rusa
 Autor: Ethan Yahel Sarricolea Cortés
+
+Notas:
+\b es el caracter de retroceso
+los espacios y retroceso se multiplican en funcion del tamaño 
+anterior y momentaneo de los textos que se muestran.
+Lo anterior sucede en el metodo clear line
+
+El metodo rotate_charger identifica si la bala acerto al usuario
+y llama al metodo clear_line de Terminal que muestra el texto en la misma linea
+
+el metodo play de Terminal solo muestra el texto inicial.
+
 """
 
 import random
@@ -39,7 +51,7 @@ class Terminal():
                        "¡Bang! Haz muerto","No paso nada"]
 
     def play(self):
-        print(input(self.textos[0]))
+        input(self.textos[0])
         self.texto_anterior=self.textos[0]
 
     def clear_line(self,text):
